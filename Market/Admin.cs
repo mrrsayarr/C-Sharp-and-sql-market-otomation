@@ -221,7 +221,229 @@ namespace Market
 
         private void button11_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+        }
+  
+        //ÇIKIŞ
+        private void button10_Click(object sender, EventArgs e)
+        {
             Application.Exit();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ÜRÜN EKLEME
+        static string constring_urun = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
+        SqlConnection baglan_urun = new SqlConnection(constring_urun);
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //ARAMA YAPMA **
+        private void button16_Click(object sender, EventArgs e)
+        {
+            String kayit = "Select * from productTB where productName=@productName";
+
+            SqlCommand komut = new SqlCommand(kayit, baglan_urun);
+
+            komut.Parameters.AddWithValue("@productName", textBox12.Text);
+
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+            baglan_urun.Close();
+        }
+
+        //ÜRÜN SİLME
+        public void urunu_sil(int id)
+        {
+            string sil = "Delete from productTB where productID = @productID";
+
+            SqlCommand komut = new SqlCommand(sil, baglan_urun);
+
+            baglan_urun.Open();
+
+            komut.Parameters.AddWithValue("@productID", id);
+            komut.ExecuteNonQuery();
+
+            baglan_urun.Close();
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow drow in dataGridView2.SelectedRows)
+            {
+                int id = Convert.ToInt32(drow.Cells[0].Value);
+                urunu_sil(id);
+                textBox5.Text = "";
+                textBox6.Text = "";
+                textBox7.Text = "";
+                textBox8.Text = "";
+                textBox9.Text = "";
+                urunleri_getir();
+            }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (baglan_urun.State == ConnectionState.Closed)
+                {
+                    baglan_urun.Open();
+                    string kayit = "insert into productTB (productName, productPCS, productPrice, productBrand, kategoriID, tedarikID ) values(@productName, @productPCS, @productPrice, @productBrand, @kategoriID, @tedarikID )";
+
+                    SqlCommand komut = new SqlCommand(kayit, baglan_urun);
+
+                    komut.Parameters.AddWithValue("@productName", textBox6.Text);
+                    komut.Parameters.AddWithValue("@productPrice", textBox7.Text);
+                    komut.Parameters.AddWithValue("@productPCS", textBox8.Text);
+                    komut.Parameters.AddWithValue("@productBrand", textBox9.Text);
+                    komut.Parameters.AddWithValue("@kategoriID", textBox10.Text);
+                    komut.Parameters.AddWithValue("@tedarikID", textBox11.Text);
+                    komut.Parameters.AddWithValue("@id", textBox6.Text);
+
+                    if (textBox6.TextLength < 3)
+                    {
+                        MessageBox.Show("doğru ürün girdiğinden emin olun. !");
+                        textBox6.Focus();
+                        baglan_urun.Close();
+                    }
+                    else if (textBox9.TextLength < 2 || textBox11.TextLength < 1)
+                    {
+                        MessageBox.Show("Geçerli değerler girin !");
+
+                        baglan_urun.Close();
+
+                    }
+
+                    else
+                    {
+                        komut.ExecuteNonQuery();
+                        baglan_urun.Close();
+
+                        btn_temizle_Click();
+
+                        MessageBox.Show("Ürün ekleme başarılı");
+                    }
+
+                }
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Hata adı: " + hata.Message);
+            }
+        }
+
+        public void urunleri_getir()
+        {
+            string getir = "Select * from productTB";
+
+            SqlCommand komut = new SqlCommand(getir, baglan_urun);
+            SqlDataAdapter ad = new SqlDataAdapter(komut);
+
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            dataGridView2.DataSource = dt;
+
+            baglan_urun.Close();
+        }
+        private void button17_Click(object sender, EventArgs e)
+        {
+            urunleri_getir();
+        }
+
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            i = e.RowIndex;
+
+            textBox6.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+            textBox7.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+            textBox8.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
+            textBox9.Text = dataGridView2.Rows[i].Cells[4].Value.ToString();
+            textBox10.Text = dataGridView2.Rows[i].Cells[5].Value.ToString();
+            textBox11.Text = dataGridView2.Rows[i].Cells[6].Value.ToString();
+
+
+
+        }
+        public void form_temizle_Click()
+        {
+            // BU FONKSİYONU ÇAĞIRARAK DAHA KISA SÜREDE FORM TEMİZLENİR.
+            foreach (Control item in this.Controls)
+            {
+                if (item.GetType().ToString() == "System.Windows.Forms.TextBox") item.Text = "";
+            }
+        }
+        private void button15_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            baglan_urun.Open();
+
+            //komut.Parameters.AddWithValue("@productName", textBox6.Text);
+            //komut.Parameters.AddWithValue("@productPrice", textBox7.Text);
+            //komut.Parameters.AddWithValue("@productPCS", textBox8.Text);
+            //komut.Parameters.AddWithValue("@productBrand", textBox9.Text);
+            //komut.Parameters.AddWithValue("@kategoriID", textBox10.Text);
+            //komut.Parameters.AddWithValue("@tedarikID", textBox11.Text);
+            //komut.Parameters.AddWithValue("@id", textBox6.Text);
+
+            string kayitguncelle = ("Update productTB set productName=@update_productName, " +
+                "   productPrice=@update_productPrice, productPCS=@update_productPCS, " +
+                "   productBrand=@update_productBrand, " +
+                "   kategoriID=@update_kategoriID, tedarikID=@update_tedarikID  " +
+                "   where productID=@productID");
+
+            SqlCommand komut = new SqlCommand(kayitguncelle, baglan_urun);
+
+            komut.Parameters.AddWithValue("@update_productName", textBox6.Text);
+            komut.Parameters.AddWithValue("@update_productPrice", textBox7.Text);
+            komut.Parameters.AddWithValue("@update_productPCS", textBox8.Text);
+            komut.Parameters.AddWithValue("@update_productBrand", textBox9.Text);
+            komut.Parameters.AddWithValue("@update_kategoriID", textBox10.Text);
+            komut.Parameters.AddWithValue("@update_tedarikID", textBox11.Text);
+            komut.Parameters.AddWithValue("productID", dataGridView2.Rows[i].Cells[0].Value);
+
+            komut.ExecuteNonQuery();
+
+            MessageBox.Show("kayıtlar başarıyla güncellendi");
+
+            // ÜRÜN GÜNCELLENDİKTEN SONRA FORM TEMİZLENİR.
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+
+            baglan_urun.Close();
+            kayitlari_getir();
         }
     }
 }
