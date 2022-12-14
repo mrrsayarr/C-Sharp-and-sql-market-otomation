@@ -266,6 +266,9 @@ namespace Market
 
             da.Fill(dt);
             dataGridView2.DataSource = dt;
+
+            textBox12.Text = "";
+
             baglan_urun.Close();
         }
 
@@ -283,6 +286,8 @@ namespace Market
 
             baglan_urun.Close();
         }
+
+        // ÜRÜN SİLME
         private void button13_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow drow in dataGridView2.SelectedRows)
@@ -354,6 +359,7 @@ namespace Market
             }
         }
 
+        // ÜRÜNLERİ GETİR FONKSİYONU
         public void urunleri_getir()
         {
             string getir = "Select * from productTB";
@@ -372,6 +378,7 @@ namespace Market
             urunleri_getir();
         }
 
+        // DATAGRİDVİEW2 YE BİLGİLERİ SIRALAMA
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             i = e.RowIndex;
@@ -388,12 +395,16 @@ namespace Market
         }
         public void form_temizle_Click()
         {
-            // BU FONKSİYONU ÇAĞIRARAK DAHA KISA SÜREDE FORM TEMİZLENİR.
+            // BU FONKSİYONU ÇAĞIRARAK DAHA KISA SÜREDE FORM TEMİZLENİR. 
+            // ÇALIŞMIYOR ??
             foreach (Control item in this.Controls)
             {
                 if (item.GetType().ToString() == "System.Windows.Forms.TextBox") item.Text = "";
             }
         }
+
+        // ÇALIŞMAYAN BUTON TEMİZLEME FONKSİYONU İÇİN TEMİZLEME KODLARI
+        // HER BUTON İÇİN TEMİZLEME KODLARINI TEKER TEKER YAZMAK GEREKİR.
         private void button15_Click(object sender, EventArgs e)
         {
             textBox4.Text = "";
@@ -402,8 +413,11 @@ namespace Market
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
+            textBox12.Text = "";
+
         }
 
+        // VAR OLAN BİR KAYDI GÜNCELLEME
         private void button14_Click(object sender, EventArgs e)
         {
             baglan_urun.Open();
