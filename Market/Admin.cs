@@ -272,7 +272,7 @@ namespace Market
             baglan_urun.Close();
         }
 
-        //ÜRÜN SİLME
+        //ÜRÜN SİLME FONKSİYONU
         public void urunu_sil(int id)
         {
             string sil = "Delete from productTB where productID = @productID";
@@ -287,7 +287,7 @@ namespace Market
             baglan_urun.Close();
         }
 
-        // ÜRÜN SİLME
+        // ÜRÜN SİLME GERÇEKLEŞTİRME
         private void button13_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow drow in dataGridView2.SelectedRows)
@@ -315,7 +315,7 @@ namespace Market
                 if (baglan_urun.State == ConnectionState.Closed)
                 {
                     baglan_urun.Open();
-                    string kayit = "insert into productTB (productName, productPCS, productPrice, productBrand, kategoriID, tedarikID ) values(@productName, @productPCS, @productPrice, @productBrand, @kategoriID, @tedarikID )";
+                    string kayit = "insert into productTB (productName, productPrice, productPCS,  productBrand, kategoriID, tedarikID ) values(@productName, @productPrice, @productPCS, @productBrand, @kategoriID, @tedarikID )";
 
                     SqlCommand komut = new SqlCommand(kayit, baglan_urun);
 
@@ -349,6 +349,11 @@ namespace Market
                         btn_temizle_Click();
 
                         MessageBox.Show("Ürün ekleme başarılı");
+
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        textBox8.Text = "";
+                        textBox9.Text = "";
                     }
 
                 }
@@ -430,10 +435,13 @@ namespace Market
             //komut.Parameters.AddWithValue("@tedarikID", textBox11.Text);
             //komut.Parameters.AddWithValue("@id", textBox6.Text);
 
-            string kayitguncelle = ("Update productTB set productName=@update_productName, " +
-                "   productPrice=@update_productPrice, productPCS=@update_productPCS, " +
+            string kayitguncelle = ("Update productTB set " +
+                "   productName=@update_productName, " +
+                "   productPrice=@update_productPrice, " +
+                "   productPCS=@update_productPCS, " +
                 "   productBrand=@update_productBrand, " +
-                "   kategoriID=@update_kategoriID, tedarikID=@update_tedarikID  " +
+                "   kategoriID=@update_kategoriID, " +
+                "   tedarikID=@update_tedarikID  " +
                 "   where productID=@productID");
 
             SqlCommand komut = new SqlCommand(kayitguncelle, baglan_urun);
