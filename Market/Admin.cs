@@ -73,7 +73,7 @@ namespace Market
                 if (baglan.State == ConnectionState.Closed)
                 {
                     baglan.Open();
-                    string kayit = "insert into userTB (userName, userTel, userMail, userPass, usertype ) values(@userName, @userTel, @userMail, @userPass, @usertype )";
+                    string kayit = "insert into userTB (userName, userTel, userMail, userPass, usertype, userCalısmaDurumu, marketID ) values(@userName, @userTel, @userMail, @userPass, @usertype,  @userCalısmaDurumu, @marketID )";
 
                     SqlCommand komut = new SqlCommand(kayit, baglan);
 
@@ -82,6 +82,8 @@ namespace Market
                     komut.Parameters.AddWithValue("@userMail", textBox3.Text);
                     komut.Parameters.AddWithValue("@userPass", textBox4.Text);
                     komut.Parameters.AddWithValue("@usertype", textBox13.Text);
+                    komut.Parameters.AddWithValue("@userCalısmaDurumu", textBox20.Text);
+                    komut.Parameters.AddWithValue("@marketID", textBox21.Text);
                     //komut.Parameters.AddWithValue("@id", textBox6.Text);
 
                     if (textBox4.TextLength < 4)
@@ -209,6 +211,8 @@ namespace Market
                 "   userTel=@update_no, " +
                 "   userMail=@userMail_update, " +
                 "   usertype=@update_usertype  " +
+                "   userCalısmaDurumue=@update_userCalısmaDurumu  " +
+                "   marketID=@update_marketID  " +
                 "   where userID=@userID");
 
             SqlCommand komut = new SqlCommand(kayitguncelle, baglan);
@@ -218,6 +222,8 @@ namespace Market
             komut.Parameters.AddWithValue("@userMail_update", textBox3.Text);
             komut.Parameters.AddWithValue("@update_userPass", textBox4.Text);
             komut.Parameters.AddWithValue("@update_usertype", textBox13.Text);
+            komut.Parameters.AddWithValue("@update_userCalısmaDurumu", textBox20.Text);
+            komut.Parameters.AddWithValue("@update_marketID", textBox21.Text);
             komut.Parameters.AddWithValue("userID", dataGridView1.Rows[i].Cells[0].Value);
 
             komut.ExecuteNonQuery();
@@ -242,6 +248,9 @@ namespace Market
             textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
             textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            textBox20.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            textBox21.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+
 
         }
 
@@ -257,7 +266,15 @@ namespace Market
         //ÇIKIŞ
         private void button10_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Emin misiniz? Kaydetmediğiniz veriler kaybolabilir ! ", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -561,18 +578,7 @@ namespace Market
 
         private void button23_Click(object sender, EventArgs e)
         {
-            String kayit = "Select * from userTB where userName=@userName";
 
-            SqlCommand komut = new SqlCommand(kayit, baglan);
-
-            komut.Parameters.AddWithValue("@userName", textBox5.Text);
-
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            baglan.Close();
         }
 
         private void textBox18_TextChanged(object sender, EventArgs e)
@@ -698,7 +704,7 @@ namespace Market
 
         private void button18_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow drow in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow drow in dataGridView3.SelectedRows)
             {
                 int id = Convert.ToInt32(drow.Cells[0].Value);
                 veriyisil(id);
@@ -710,6 +716,93 @@ namespace Market
 
                 kayitlari_getir();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            String kayit = "Select * from userTB where userName=@userName";
+
+            SqlCommand komut = new SqlCommand(kayit, baglan);
+
+            komut.Parameters.AddWithValue("@userName", textBox5.Text);
+
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            textBox5.Text = "";
+            baglan.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            String kayit = "Select * from userTB where userName=@userName";
+
+            SqlCommand komut = new SqlCommand(kayit, baglan);
+
+            komut.Parameters.AddWithValue("@userName", textBox19.Text);
+
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dataGridView3.DataSource = dt;
+            textBox19.Text = "";
+            baglan.Close();
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String kayit = "Select * from userTB where userName=@userName";
+
+                SqlCommand komut = new SqlCommand(kayit, baglan);
+
+                komut.Parameters.AddWithValue("@userName", textBox19.Text);
+
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                DataTable dt = new DataTable();
+                
+                da.Fill(dt);
+                dataGridView3.DataSource = dt;
+                baglan.Close();
+            }
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String kayit = "Select * from userTB where userName=@userName";
+
+                SqlCommand komut = new SqlCommand(kayit, baglan);
+
+                komut.Parameters.AddWithValue("@userName", textBox5.Text);
+
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                baglan.Close();
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
