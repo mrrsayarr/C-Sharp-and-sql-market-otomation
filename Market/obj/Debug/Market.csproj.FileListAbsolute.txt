@@ -36,3 +36,4 @@ D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.csproj
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.exe
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.pdb
+D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Musteri.resources

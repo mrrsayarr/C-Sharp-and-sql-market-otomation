@@ -120,6 +120,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -135,6 +138,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kullanıcıekle
@@ -1081,6 +1085,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel3);
+            this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.button11);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
@@ -1094,7 +1100,7 @@
             // 
             this.button11.BackColor = System.Drawing.Color.Red;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button11.Location = new System.Drawing.Point(882, 6);
+            this.button11.Location = new System.Drawing.Point(860, 238);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(22, 24);
             this.button11.TabIndex = 10;
@@ -1158,6 +1164,34 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(3, 3);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(888, 31);
+            this.button24.TabIndex = 11;
+            this.button24.Text = "MÜŞTERİ EKLE / SİL";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(906, 463);
+            this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button24);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(906, 39);
+            this.panel3.TabIndex = 13;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1195,6 +1229,7 @@
             this.tabPage5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1292,5 +1327,8 @@
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

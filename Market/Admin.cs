@@ -809,6 +809,25 @@ namespace Market
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear(); // Alt panel ismi "panel2"
+            Musteri if1 = new Musteri(); 
+            if1.TopLevel = false;
+            panel2.Controls.Add(if1);
+            if1.Show();
+            if1.Dock = DockStyle.Fill;
+            if1.BringToFront();
+
+            button24.Visible = false;
+
+        }
     }
 }
 
