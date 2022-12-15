@@ -211,7 +211,7 @@ namespace Market
                 "   userTel=@update_no, " +
                 "   userMail=@userMail_update, " +
                 "   usertype=@update_usertype  " +
-                "   userCalısmaDurumue=@update_userCalısmaDurumu  " +
+                "   userCalısmaDurumu=@update_userCalısmaDurumu  " +
                 "   marketID=@update_marketID  " +
                 "   where userID=@userID");
 
@@ -801,6 +801,11 @@ namespace Market
         }
 
         private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

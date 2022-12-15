@@ -62,6 +62,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -521,6 +522,7 @@
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.button7);
             this.tabPage4.Controls.Add(this.button23);
+            this.tabPage4.Controls.Add(this.comboBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -528,6 +530,21 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "KASİYER EKLE";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Çalışıyor ",
+            "İzinli",
+            "Ayrıldı"});
+            this.comboBox2.Location = new System.Drawing.Point(684, 251);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 24);
+            this.comboBox2.TabIndex = 42;
+            this.comboBox2.Text = "Çalışıyor ";
+            this.comboBox2.Visible = false;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label24
             // 
@@ -558,7 +575,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(179, 169);
+            this.textBox20.Location = new System.Drawing.Point(179, 167);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(160, 22);
             this.textBox20.TabIndex = 38;
@@ -1274,5 +1291,6 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
