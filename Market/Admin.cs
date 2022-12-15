@@ -73,7 +73,7 @@ namespace Market
                 if (baglan.State == ConnectionState.Closed)
                 {
                     baglan.Open();
-                    string kayit = "insert into userTB (userName, userTel, userMail, userPass ) values(@userName, @userTel, @userMail, @userPass )";
+                    string kayit = "insert into userTB (userName, userTel, userMail, userPass, usertype ) values(@userName, @userTel, @userMail, @userPass, @usertype )";
 
                     SqlCommand komut = new SqlCommand(kayit, baglan);
 
@@ -81,6 +81,7 @@ namespace Market
                     komut.Parameters.AddWithValue("@userTel", textBox2.Text);
                     komut.Parameters.AddWithValue("@userMail", textBox3.Text);
                     komut.Parameters.AddWithValue("@userPass", textBox4.Text);
+                    komut.Parameters.AddWithValue("@usertype", textBox13.Text);
                     //komut.Parameters.AddWithValue("@id", textBox6.Text);
 
                     if (textBox4.TextLength < 4)
@@ -103,7 +104,11 @@ namespace Market
 
                         btn_temizle_Click();
 
-                        MessageBox.Show("kayıt ekleme başarılı");
+                        MessageBox.Show("Kayıt ekleme başarılı");
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
                     }
                 }
             }
@@ -124,6 +129,7 @@ namespace Market
             DataTable dt = new DataTable();
             ad.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView3.DataSource = dt;
 
             baglan.Close();
         }
@@ -143,7 +149,12 @@ namespace Market
 
         private void button4_Click(object sender, EventArgs e)
         {
-            btn_temizle_Click();
+            btn_temizle_Click(); // ÇALIŞMIYOR ?
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -203,6 +214,11 @@ namespace Market
             komut.Parameters.AddWithValue("userID", dataGridView1.Rows[i].Cells[0].Value);
 
             komut.ExecuteNonQuery();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
 
             MessageBox.Show("kayıtlar başarıyla güncellendi");
             baglan.Close();
@@ -294,11 +310,13 @@ namespace Market
             {
                 int id = Convert.ToInt32(drow.Cells[0].Value);
                 urunu_sil(id);
+
                 textBox5.Text = "";
                 textBox6.Text = "";
                 textBox7.Text = "";
                 textBox8.Text = "";
                 textBox9.Text = "";
+
                 urunleri_getir();
             }
         }
@@ -380,12 +398,13 @@ namespace Market
         }
         private void button17_Click(object sender, EventArgs e)
         {
-            urunleri_getir();
+            urunleri_getir(); // BUTONLA ÜRÜNLERİ GETİR FONKİSYONUNU ÇAĞIRIR
         }
 
         // DATAGRİDVİEW2 YE BİLGİLERİ SIRALAMA
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //this.dataGridView2.Columns["productName"].SortMode = DataGridViewColumnSortMode.Automatic;
             i = e.RowIndex;
 
             textBox6.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
@@ -412,13 +431,13 @@ namespace Market
         // HER BUTON İÇİN TEMİZLEME KODLARINI TEKER TEKER YAZMAK GEREKİR.
         private void button15_Click(object sender, EventArgs e)
         {
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
-            textBox12.Text = "";
+            textBox4.Text  =  "";
+            textBox5.Text  =  "";
+            textBox6.Text  =  "";
+            textBox7.Text  =  "";
+            textBox8.Text  =  "";
+            textBox9.Text  =  "";
+            textBox12.Text =  "";
 
         }
 
@@ -464,8 +483,169 @@ namespace Market
             textBox8.Text = "";
             textBox9.Text = "";
 
-            baglan_urun.Close();
+            baglan_urun.Close(); // BAĞLANTIYI KAPATIR
+            kayitlari_getir();  // ÜRÜNLERİ TEKRAR GETİRİR
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            i = e.RowIndex;
+
+            textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            String kayit = "Select * from userTB where userName=@userName";
+
+            SqlCommand komut = new SqlCommand(kayit, baglan);
+
+            komut.Parameters.AddWithValue("@userName", textBox5.Text);
+
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            baglan.Close();
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                    string kayit = "insert into userTB (userName, userTel, userMail, userPass, usertype ) values(@userName, @userTel, @userMail, @userPass, @usertype )";
+
+                    SqlCommand komut = new SqlCommand(kayit, baglan);
+
+                    komut.Parameters.AddWithValue("@userName", textBox17.Text);
+                    komut.Parameters.AddWithValue("@userTel", textBox18.Text);
+                    komut.Parameters.AddWithValue("@userMail", textBox16.Text);
+                    komut.Parameters.AddWithValue("@userPass", textBox15.Text);
+                    komut.Parameters.AddWithValue("@usertype", textBox14.Text);
+                    //komut.Parameters.AddWithValue("@id", textBox6.Text);
+
+                    if (textBox15.TextLength < 4)
+                    {
+                        MessageBox.Show("Şifre en az 4 hane veya daha büyük olmalıdır !");
+                        textBox4.Focus();
+                        baglan.Close();
+                    }
+                    else if (textBox17.TextLength < 3 || textBox16.TextLength < 2 || textBox18.TextLength < 6)
+                    {
+                        MessageBox.Show("Geçerli değerler girin !");
+
+                        baglan.Close();
+                    }
+
+                    else
+                    {
+                        komut.ExecuteNonQuery();
+                        baglan.Close();
+
+                        btn_temizle_Click();
+
+                        MessageBox.Show("Kayıt ekleme başarılı");
+                        textBox17.Text = "";
+                        textBox18.Text = "";
+                        textBox16.Text = "";
+                        textBox15.Text = "";
+                    }
+                }
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Hata adı: " + hata.Message);
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
             kayitlari_getir();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        { }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            textBox17.Text = "";
+            textBox18.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+        }
+
+        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            i = e.RowIndex;
+
+            textBox17.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
+            textBox18.Text = dataGridView3.Rows[i].Cells[2].Value.ToString();
+            textBox16.Text = dataGridView3.Rows[i].Cells[3].Value.ToString();
+            textBox15.Text = dataGridView3.Rows[i].Cells[4].Value.ToString();
         }
     }
 }

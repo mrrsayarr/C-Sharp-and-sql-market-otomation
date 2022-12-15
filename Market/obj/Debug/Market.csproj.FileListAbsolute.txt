@@ -29,7 +29,6 @@ D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\bin\Debug\Market.exe
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\bin\Debug\Market.pdb
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.csproj.AssemblyReference.cache
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.csproj.SuggestedBindingRedirects.cache
-D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Kasiyer.resources
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Login.resources
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Admin.resources
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Properties.Resources.resources

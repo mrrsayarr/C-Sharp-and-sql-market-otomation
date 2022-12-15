@@ -58,17 +58,8 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kasiyer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Kasiyer.Designer.cs">
-      <DependentUpon>Kasiyer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Kasiyer.resx">
-      <DependentUpon>Kasiyer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
