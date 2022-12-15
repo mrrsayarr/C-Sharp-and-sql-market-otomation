@@ -203,7 +203,13 @@ namespace Market
         {
             baglan.Open();
 
-            string kayitguncelle = ("Update userTB set userName=@update_name, userPass=@update_userPass, userTel=@update_no, userMail=@userMail_update  where userID=@userID");
+            string kayitguncelle = ("Update userTB set " +
+                "   userName=@update_name, " +
+                "   userPass=@update_userPass, " +
+                "   userTel=@update_no, " +
+                "   userMail=@userMail_update, " +
+                "   usertype=@update_usertype  " +
+                "   where userID=@userID");
 
             SqlCommand komut = new SqlCommand(kayitguncelle, baglan);
 
@@ -211,17 +217,20 @@ namespace Market
             komut.Parameters.AddWithValue("@update_no", textBox2.Text);
             komut.Parameters.AddWithValue("@userMail_update", textBox3.Text);
             komut.Parameters.AddWithValue("@update_userPass", textBox4.Text);
+            komut.Parameters.AddWithValue("@update_usertype", textBox13.Text);
             komut.Parameters.AddWithValue("userID", dataGridView1.Rows[i].Cells[0].Value);
 
             komut.ExecuteNonQuery();
+
+            MessageBox.Show("kayıtlar başarıyla güncellendi");
+            baglan.Close();
 
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            textBox13.Text = "Kasiyer";
 
-            MessageBox.Show("kayıtlar başarıyla güncellendi");
-            baglan.Close();
             kayitlari_getir();
         }
 
@@ -231,8 +240,9 @@ namespace Market
 
             textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            textBox4.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -538,9 +548,9 @@ namespace Market
             i = e.RowIndex;
 
             textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
             textBox3.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
-            textBox4.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
 
         }
 
@@ -581,9 +591,9 @@ namespace Market
 
                     SqlCommand komut = new SqlCommand(kayit, baglan);
 
-                    komut.Parameters.AddWithValue("@userName", textBox17.Text);
-                    komut.Parameters.AddWithValue("@userTel", textBox18.Text);
-                    komut.Parameters.AddWithValue("@userMail", textBox16.Text);
+                    komut.Parameters.AddWithValue("@userName", textBox16.Text);
+                    komut.Parameters.AddWithValue("@userTel", textBox17.Text);
+                    komut.Parameters.AddWithValue("@userMail", textBox18.Text);
                     komut.Parameters.AddWithValue("@userPass", textBox15.Text);
                     komut.Parameters.AddWithValue("@usertype", textBox14.Text);
                     //komut.Parameters.AddWithValue("@id", textBox6.Text);
@@ -642,10 +652,64 @@ namespace Market
         {
             i = e.RowIndex;
 
-            textBox17.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
-            textBox18.Text = dataGridView3.Rows[i].Cells[2].Value.ToString();
-            textBox16.Text = dataGridView3.Rows[i].Cells[3].Value.ToString();
-            textBox15.Text = dataGridView3.Rows[i].Cells[4].Value.ToString();
+            textBox16.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
+            textBox17.Text = dataGridView3.Rows[i].Cells[4].Value.ToString();
+            textBox18.Text = dataGridView3.Rows[i].Cells[7].Value.ToString();
+            textBox15.Text = dataGridView3.Rows[i].Cells[5].Value.ToString();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            baglan.Open();
+
+            string kayitguncelle = ("Update userTB set " +
+                "   userName=@update_name, " +
+                "   userPass=@update_userPass, " +
+                "   userTel=@update_no, " +
+                "   userMail=@userMail_update, " +
+                "   usertype=@update_usertype  where userID=@userID");
+
+            SqlCommand komut = new SqlCommand(kayitguncelle, baglan);
+
+            komut.Parameters.AddWithValue("@update_name", textBox16.Text);
+            komut.Parameters.AddWithValue("@update_no", textBox17.Text);
+            komut.Parameters.AddWithValue("@userMail_update", textBox18.Text);
+            komut.Parameters.AddWithValue("@update_userPass", textBox15.Text);
+            komut.Parameters.AddWithValue("@update_usertype", textBox14.Text);
+            komut.Parameters.AddWithValue("userID", dataGridView3.Rows[i].Cells[0].Value);
+
+            komut.ExecuteNonQuery();
+
+            textBox15.Text = "";
+            textBox16.Text = "";
+            textBox17.Text = "";
+            textBox18.Text = "";
+            textBox14.Text = "Yönetici";
+
+            MessageBox.Show("Kayıtlar başarıyla güncellendi");
+            baglan.Close();
+            kayitlari_getir();
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow drow in dataGridView1.SelectedRows)
+            {
+                int id = Convert.ToInt32(drow.Cells[0].Value);
+                veriyisil(id);
+
+                textBox15.Text = "";
+                textBox16.Text = "";
+                textBox17.Text = "";
+                textBox18.Text = "";
+
+                kayitlari_getir();
+            }
         }
     }
 }
