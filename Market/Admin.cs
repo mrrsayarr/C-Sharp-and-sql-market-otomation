@@ -25,7 +25,7 @@ namespace Market
 
         private void kullanıcıekle_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True");
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Insert into userTB (userName,userPass,usertype) values ('" + txtkullanıcıadı.Text + "','" + txtsifre.Text + "','" + comboBox1.Text + "' )", baglanti);
             komut.ExecuteNonQuery();
@@ -35,7 +35,7 @@ namespace Market
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True");
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Delete from userTB where userName='" + txtkullanıcıadı.Text + "'", baglanti);
             komut.ExecuteNonQuery();
@@ -58,7 +58,7 @@ namespace Market
 
         }
 
-        static string constring = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
+        static string constring = "Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True";
         SqlConnection baglan = new SqlConnection(constring);
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -243,13 +243,16 @@ namespace Market
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             i = e.RowIndex;
-
-            textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
-            textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
-            textBox20.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            textBox21.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+            if (i >= 0)
+            {
+                textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                textBox20.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                textBox21.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+            }
+            
 
 
         }
@@ -283,7 +286,7 @@ namespace Market
         }
 
         //ÜRÜN EKLEME
-        static string constring_urun = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
+        static string constring_urun = "Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True";
         SqlConnection baglan_urun = new SqlConnection(constring_urun);
         private void tabPage2_Click(object sender, EventArgs e)
         {
@@ -433,16 +436,16 @@ namespace Market
         {
             //this.dataGridView2.Columns["productName"].SortMode = DataGridViewColumnSortMode.Automatic;
             i = e.RowIndex;
-
-            textBox6.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
-            textBox7.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
-            textBox8.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
-            textBox9.Text = dataGridView2.Rows[i].Cells[4].Value.ToString();
-            textBox10.Text = dataGridView2.Rows[i].Cells[5].Value.ToString();
-            textBox11.Text = dataGridView2.Rows[i].Cells[6].Value.ToString();
-
-
-
+            if (i >= 0)
+            {
+                textBox6.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+                textBox7.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+                textBox8.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
+                textBox9.Text = dataGridView2.Rows[i].Cells[4].Value.ToString();
+                textBox10.Text = dataGridView2.Rows[i].Cells[5].Value.ToString();
+                textBox11.Text = dataGridView2.Rows[i].Cells[6].Value.ToString();
+            }
+            
         }
         public void form_temizle_Click()
         {
@@ -499,6 +502,7 @@ namespace Market
             komut.Parameters.AddWithValue("@update_kategoriID", textBox10.Text);
             komut.Parameters.AddWithValue("@update_tedarikID", textBox11.Text);
             komut.Parameters.AddWithValue("productID", dataGridView2.Rows[i].Cells[0].Value);
+            
 
             komut.ExecuteNonQuery();
 
@@ -563,11 +567,14 @@ namespace Market
         {
 
             i = e.RowIndex;
-
-            textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
-            textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            if (i >= 0)
+            {
+                textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            }
+            
 
         }
 
@@ -658,10 +665,14 @@ namespace Market
         {
             i = e.RowIndex;
 
-            textBox16.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
-            textBox17.Text = dataGridView3.Rows[i].Cells[4].Value.ToString();
-            textBox18.Text = dataGridView3.Rows[i].Cells[7].Value.ToString();
-            textBox15.Text = dataGridView3.Rows[i].Cells[5].Value.ToString();
+            if (i >= 0)
+            {
+                textBox16.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
+                textBox17.Text = dataGridView3.Rows[i].Cells[4].Value.ToString();
+                textBox18.Text = dataGridView3.Rows[i].Cells[7].Value.ToString();
+                textBox15.Text = dataGridView3.Rows[i].Cells[5].Value.ToString();
+            }
+            
         }
 
         private void button19_Click(object sender, EventArgs e)

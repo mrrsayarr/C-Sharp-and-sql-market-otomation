@@ -37,3 +37,16 @@ D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.csproj
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.exe
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.pdb
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Musteri.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe.config
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.pdb
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.AssemblyReference.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.SuggestedBindingRedirects.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Login.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Admin.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Musteri.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Properties.Resources.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.GenerateResource.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.exe
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.pdb
