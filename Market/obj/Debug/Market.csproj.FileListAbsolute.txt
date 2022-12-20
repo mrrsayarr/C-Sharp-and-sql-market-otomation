@@ -67,3 +67,21 @@ C:\Users\Yigit\Desktop\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Ma
 C:\Users\Yigit\Desktop\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
 C:\Users\Yigit\Desktop\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.exe
 C:\Users\Yigit\Desktop\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.pdb
+<<<<<<< HEAD
+=======
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe.config
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.pdb
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.AssemblyReference.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.SuggestedBindingRedirects.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Form1.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.kasiyer.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Login.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Admin.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Musteri.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Properties.Resources.resources
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.GenerateResource.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.exe
+C:\Users\Yigit\Desktop\C# Market Otomasyon\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.pdb
+>>>>>>> 4eebaafc4aedbc215d9e6f33226e6e5b2a969d30
