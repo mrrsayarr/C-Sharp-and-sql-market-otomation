@@ -62,7 +62,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -92,6 +91,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -114,15 +114,15 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button24 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -136,9 +136,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kullanıcıekle
@@ -287,7 +287,7 @@
             this.groupBox1.Size = new System.Drawing.Size(306, 120);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "KULLANICI ARA";
+            this.groupBox1.Text = "ÜRÜN ARA";
             // 
             // button16
             // 
@@ -535,21 +535,6 @@
             this.tabPage4.Text = "KASİYER EKLE";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Çalışıyor ",
-            "İzinli",
-            "Ayrıldı"});
-            this.comboBox2.Location = new System.Drawing.Point(684, 251);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 24);
-            this.comboBox2.TabIndex = 42;
-            this.comboBox2.Text = "Çalışıyor ";
-            this.comboBox2.Visible = false;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -792,6 +777,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 22);
             this.textBox3.TabIndex = 15;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -799,6 +785,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 22);
             this.textBox2.TabIndex = 14;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -843,6 +830,21 @@
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Visible = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Çalışıyor ",
+            "İzinli",
+            "Ayrıldı"});
+            this.comboBox2.Location = new System.Drawing.Point(684, 251);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 24);
+            this.comboBox2.TabIndex = 42;
+            this.comboBox2.Text = "Çalışıyor ";
+            this.comboBox2.Visible = false;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -990,6 +992,7 @@
             this.textBox14.Size = new System.Drawing.Size(160, 22);
             this.textBox14.TabIndex = 42;
             this.textBox14.Text = "Yönetici";
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label18
             // 
@@ -1096,6 +1099,34 @@
             this.tabPage3.Text = "MÜŞTERİLER";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button24);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(906, 39);
+            this.panel3.TabIndex = 13;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(3, 3);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(888, 31);
+            this.button24.TabIndex = 11;
+            this.button24.Text = "MÜŞTERİ EKLE / SİL";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(906, 463);
+            this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Red;
@@ -1145,10 +1176,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Schoolbook", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.Location = new System.Drawing.Point(126, 71);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(673, 41);
+            this.label15.Size = new System.Drawing.Size(601, 39);
             this.label15.TabIndex = 13;
             this.label15.Text = "ÇIKIŞ YAPMAK İÇİN BUTONA BASIN";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -1163,34 +1194,6 @@
             this.button10.TabIndex = 12;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(3, 3);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(888, 31);
-            this.button24.TabIndex = 11;
-            this.button24.Text = "MÜŞTERİ EKLE / SİL";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(906, 463);
-            this.panel2.TabIndex = 12;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button24);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(906, 39);
-            this.panel3.TabIndex = 13;
             // 
             // Admin
             // 
@@ -1225,11 +1228,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
