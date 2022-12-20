@@ -17,6 +17,7 @@ namespace Market
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,51 +27,32 @@ namespace Market
         
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True");
-            
-            SqlCommand komut = new SqlCommand("Select * From adminTB Where adminName='" + txtUser.Text + "' and adminPass='" + txtPass.Text + "'", baglanti);
-            SqlDataAdapter sda = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            if (comboBox1.SelectedIndex == null || comboBox1.SelectedIndex == -1)
+            SqlConnection baglanti = new SqlConnection("Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True");
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select * From adminTB Where adminName='" + txtUser.Text + "' and adminPass='" + txtPass.Text + "' and usertype='" + comboBox1.Text + "'", baglanti);
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
             {
-                button1.Enabled = true;
-            }
-            else if (comboBox1.Text == "Yönetici" || comboBox1.Text == "Kasiyer")
-            {
-                button1.Enabled = true;
-                string cmbItemValue = comboBox1.SelectedItem.ToString();
-                sda.Fill(dt);
-                if (dt.Rows.Count == 1)
+                if (comboBox1.Text == "Yönetici")
                 {
-                    if (cmbItemValue == "Yönetici")
-                    {
-                        MessageBox.Show("Yönetici Girişi Başarılı");
-                        Admin admin = new Admin();
-                        admin.Show();
-                        this.Hide();
-                    }
-                    else if (cmbItemValue == "Kasiyer")
-                    {
-                        MessageBox.Show("Kasiyer Girişi Başarılı");
-                        //Kasiyer kasiyer = new Kasiyer();
-                        //kasiyer.Show();
-                        this.Hide();
-                        MessageBox.Show("Kasiyer Girişi kapatılıyor");
-                        Application.Exit();
-                    }
-                    //else if(cmbItemValue == "")
-                    //{
-                    //    MessageBox.Show("Yetkinizi belirtin");
-                    //    Login login = new Login();
-                    //    login.Show();
-                    //}
+                    Admin admin = new Admin();
+                    admin.Show();
+                    this.Hide();
                 }
-                else
+                else if (comboBox1.Text == "Kasiyer")
                 {
-                    MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı");
+                    kasiyer kasiyer = new kasiyer();
+                    kasiyer.Show();
+                    this.Hide();
                 }
             }
-           
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+            }
+            baglanti.Close();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,6 +70,11 @@ namespace Market
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

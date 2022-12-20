@@ -26,7 +26,7 @@ namespace Market
             textBox4.Text = "";
         }
 
-        static string constring_urun = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
+        static string constring_urun = "Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True";
         SqlConnection baglan_urun = new SqlConnection(constring_urun);
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,10 +100,13 @@ namespace Market
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             i = e.RowIndex;
-
-            textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            if (i >= 0)
+            {
+                textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            }
+            
 
         }
 
@@ -154,6 +157,11 @@ namespace Market
                 temizle();
                 kayitlari_getir();
             }
+        }
+
+        private void Musteri_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
