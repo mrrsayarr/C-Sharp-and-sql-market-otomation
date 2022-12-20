@@ -131,6 +131,7 @@
             this.ID.Size = new System.Drawing.Size(172, 31);
             this.ID.TabIndex = 1;
             this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
+            this.ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Miktar
             // 
@@ -142,6 +143,7 @@
             this.Miktar.Size = new System.Drawing.Size(172, 31);
             this.Miktar.TabIndex = 1;
             this.Miktar.Text = "1";
+            this.Miktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Miktar_KeyPress);
             // 
             // Fiyat
             // 
@@ -330,8 +332,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(711, 422);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(695, 422);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 41);

@@ -19,7 +19,6 @@ namespace Market
         SqlDataAdapter da;
         public void listele()
         {
-
             da = new SqlDataAdapter("select * from Fis", con);
 
             DataTable tablo = new DataTable();
@@ -51,8 +50,10 @@ namespace Market
 
         private void SİL_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("delete from Fis where ÜrünID='" + int.Parse(ID.Text) + "'", con);
-            
+            cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
+            //yada **
+            //cmd = new SqlCommand("delete from Fis where ÜrünID='" + int.Parse(ID.Text) + "'", con);
+
             //cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
             con.Open();
 
@@ -63,10 +64,7 @@ namespace Market
         }
 
         private void ID_TextChanged(object sender, EventArgs e)
-
-
         {
-
             if (ID.Text == "" || Convert.ToInt32(ID.Text) >= 200) foreach (Control item in Controls) if (item is System.Windows.Forms.TextBox) item.Text = "";
 
             con.Open();
@@ -118,7 +116,6 @@ namespace Market
         {
            
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ID.Text = "32";
@@ -135,12 +132,10 @@ namespace Market
         {
             ID.Text = "33";
         }
-
         private void kasiyer_Click(object sender, EventArgs e)
         {
 
         }
-
         private void X_Click(object sender, EventArgs e)
         {
 
@@ -222,6 +217,17 @@ namespace Market
             SqlCommand sil = new SqlCommand("TRUNCATE TABLE Fis;", con);
             sil.ExecuteNonQuery();
             con.Close();
+            listele();
+        }
+
+        private void Miktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
