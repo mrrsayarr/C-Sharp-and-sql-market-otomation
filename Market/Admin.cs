@@ -843,7 +843,7 @@ namespace Market
             if1.Dock = DockStyle.Fill;
             if1.BringToFront();
 
-            button24.Visible = false;
+            button24.Enabled = false;
 
         }
 
@@ -860,6 +860,16 @@ namespace Market
         private void textBox14_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bu Kişi Kasiyer olarak kayıt olacak veya güncellenecektir");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bu Kişi Yönetici olarak kayıt olacak veya güncellenecektir");
         }
     }
 }

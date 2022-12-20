@@ -42,6 +42,7 @@ namespace Market
                 else if (comboBox1.Text == "Kasiyer")
                 {
                     kasiyer kasiyer = new kasiyer();
+                    kasiyer.listele(); 
                     kasiyer.Show();
                     this.Hide();
                 }

@@ -76,8 +76,6 @@ namespace Market
             {
                 Adı.Text = read["productName"].ToString();
                 Fiyat.Text = read["productPrice"].ToString();
-
-
             }
             con.Close();
         }
@@ -92,7 +90,7 @@ namespace Market
         {
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
-            printPreviewDialog1.ShowDialog();
+            printPreviewDialog1.ShowDialog(); // YAZICI GÖRMEZSE HATA VEREBİLİR VEYA PDF YAZICI!
         }
 
         private void hesapla()
@@ -106,7 +104,6 @@ namespace Market
             //}
             //catch (Exception)
             //{
-
             //    throw;
             //}
             int sum = 0;
@@ -151,6 +148,11 @@ namespace Market
 
         private void label_Exit_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand sil = new SqlCommand("TRUNCATE TABLE Fis;", con);
+            sil.ExecuteNonQuery();
+            con.Close();
+
             Login login = new Login();
             login.Show();
             this.Hide();
@@ -214,5 +216,12 @@ namespace Market
 
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand sil = new SqlCommand("TRUNCATE TABLE Fis;", con);
+            sil.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

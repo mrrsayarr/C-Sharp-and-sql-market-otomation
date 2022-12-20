@@ -55,6 +55,7 @@
             this.label_Exit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 108);
+            this.label1.Location = new System.Drawing.Point(31, 91);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 33);
@@ -79,7 +80,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 166);
+            this.label2.Location = new System.Drawing.Point(31, 149);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 33);
@@ -91,7 +92,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(31, 224);
+            this.label3.Location = new System.Drawing.Point(31, 207);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 33);
@@ -103,7 +104,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 282);
+            this.label4.Location = new System.Drawing.Point(31, 265);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 33);
@@ -114,7 +115,7 @@
             // 
             this.Adı.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Adı.Font = new System.Drawing.Font("Segoe UI", 17F);
-            this.Adı.Location = new System.Drawing.Point(176, 110);
+            this.Adı.Location = new System.Drawing.Point(176, 93);
             this.Adı.Margin = new System.Windows.Forms.Padding(2);
             this.Adı.Name = "Adı";
             this.Adı.Size = new System.Drawing.Size(172, 31);
@@ -124,7 +125,7 @@
             // 
             this.ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID.Font = new System.Drawing.Font("Segoe UI", 17F);
-            this.ID.Location = new System.Drawing.Point(176, 167);
+            this.ID.Location = new System.Drawing.Point(176, 150);
             this.ID.Margin = new System.Windows.Forms.Padding(2);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(172, 31);
@@ -135,7 +136,7 @@
             // 
             this.Miktar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Miktar.Font = new System.Drawing.Font("Segoe UI", 17F);
-            this.Miktar.Location = new System.Drawing.Point(176, 226);
+            this.Miktar.Location = new System.Drawing.Point(176, 209);
             this.Miktar.Margin = new System.Windows.Forms.Padding(2);
             this.Miktar.Name = "Miktar";
             this.Miktar.Size = new System.Drawing.Size(172, 31);
@@ -146,7 +147,7 @@
             // 
             this.Fiyat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Fiyat.Font = new System.Drawing.Font("Segoe UI", 17F);
-            this.Fiyat.Location = new System.Drawing.Point(176, 284);
+            this.Fiyat.Location = new System.Drawing.Point(176, 267);
             this.Fiyat.Margin = new System.Windows.Forms.Padding(2);
             this.Fiyat.Name = "Fiyat";
             this.Fiyat.Size = new System.Drawing.Size(172, 31);
@@ -183,7 +184,7 @@
             this.Ekle.AutoSize = true;
             this.Ekle.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.Ekle.ForeColor = System.Drawing.Color.White;
-            this.Ekle.Location = new System.Drawing.Point(47, 354);
+            this.Ekle.Location = new System.Drawing.Point(51, 318);
             this.Ekle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Ekle.Name = "Ekle";
             this.Ekle.Size = new System.Drawing.Size(103, 41);
@@ -198,7 +199,7 @@
             this.SİL.AutoSize = true;
             this.SİL.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.SİL.ForeColor = System.Drawing.Color.White;
-            this.SİL.Location = new System.Drawing.Point(230, 354);
+            this.SİL.Location = new System.Drawing.Point(234, 318);
             this.SİL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SİL.Name = "SİL";
             this.SİL.Size = new System.Drawing.Size(75, 41);
@@ -213,7 +214,7 @@
             this.Yazdir.AutoSize = true;
             this.Yazdir.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.Yazdir.ForeColor = System.Drawing.Color.White;
-            this.Yazdir.Location = new System.Drawing.Point(104, 428);
+            this.Yazdir.Location = new System.Drawing.Point(108, 392);
             this.Yazdir.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Yazdir.Name = "Yazdir";
             this.Yazdir.Size = new System.Drawing.Size(152, 41);
@@ -337,12 +338,26 @@
             this.label7.TabIndex = 8;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(104, 465);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(156, 25);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "FİŞİ TEMİZLE";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // kasiyer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1192, 499);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_Exit);
@@ -408,5 +423,6 @@
         private System.Windows.Forms.Label label_Exit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
