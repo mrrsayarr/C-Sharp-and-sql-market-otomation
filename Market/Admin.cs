@@ -13,6 +13,8 @@ namespace Market
 {
     public partial class Admin : Form
     {
+        
+
         public Admin()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace Market
 
         private void Admin_Load(object sender, EventArgs e)
         {
-
+       
         }
 
         private void kullanıcıekle_Click(object sender, EventArgs e)
@@ -210,10 +212,9 @@ namespace Market
                 "   userPass=@update_userPass, " +
                 "   userTel=@update_no, " +
                 "   userMail=@userMail_update, " +
-                "   usertype=@update_usertype  " +
-                "   userCalısmaDurumu=@update_userCalısmaDurumu  " +
-                "   marketID=@update_marketID  " +
-                "   where userID=@userID");
+                "   userCalısmaDurumu=@update_userCalısmaDurumu, " +
+                "   marketID=@update_marketID, " +
+                "   usertype=@update_usertype  where userID=@userID");
 
             SqlCommand komut = new SqlCommand(kayitguncelle, baglan);
 
@@ -224,20 +225,25 @@ namespace Market
             komut.Parameters.AddWithValue("@update_usertype", textBox13.Text);
             komut.Parameters.AddWithValue("@update_userCalısmaDurumu", textBox20.Text);
             komut.Parameters.AddWithValue("@update_marketID", textBox21.Text);
-            komut.Parameters.AddWithValue("userID", dataGridView1.Rows[i].Cells[0].Value);
+            komut.Parameters.AddWithValue("userID", dataGridView3.Rows[i].Cells[0].Value);
+            
+            
 
             komut.ExecuteNonQuery();
-
-            MessageBox.Show("kayıtlar başarıyla güncellendi");
             baglan.Close();
+            
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
+
+            textBox15.Text = "";
+            textBox16.Text = "";
+            textBox17.Text = "";
+            textBox18.Text = "";
             textBox13.Text = "Kasiyer";
 
+            MessageBox.Show("Kayıtlar başarıyla güncellendi");
+            baglan.Close();
             kayitlari_getir();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -246,13 +252,16 @@ namespace Market
             if (i >= 0)
             {
                 textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                textBox3.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
                 textBox4.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                textBox13.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
                 textBox20.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
                 textBox21.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+
+
             }
-            
+
 
 
         }
@@ -272,7 +281,10 @@ namespace Market
             DialogResult dialogResult = MessageBox.Show("Emin misiniz? Kaydetmediğiniz veriler kaybolabilir ! ", "Çıkış", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                Application.Exit();
+                Login login = new Login();
+                login.Show();
+                this.Hide();
+                //Application.Exit();
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -446,6 +458,9 @@ namespace Market
                 textBox11.Text = dataGridView2.Rows[i].Cells[6].Value.ToString();
             }
             
+
+
+
         }
         public void form_temizle_Click()
         {
@@ -664,7 +679,6 @@ namespace Market
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             i = e.RowIndex;
-
             if (i >= 0)
             {
                 textBox16.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
@@ -837,6 +851,21 @@ namespace Market
             if1.BringToFront();
 
             button24.Visible = false;
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -17,18 +17,19 @@ namespace Market
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            comboBox1.SelectedText = "Kasiyer";
         }
         
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection baglanti = new SqlConnection("Data Source=Yigit-Senal;Initial Catalog=marketDB;Integrated Security=True");
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * From adminTB Where adminName='" + txtUser.Text + "' and adminPass='" + txtPass.Text + "' and usertype='"+comboBox1.Text+"'", baglanti);
+            SqlCommand komut = new SqlCommand("Select * From adminTB Where adminName='" + txtUser.Text + "' and adminPass='" + txtPass.Text + "' and usertype='" + comboBox1.Text + "'", baglanti);
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
@@ -40,8 +41,8 @@ namespace Market
                 }
                 else if (comboBox1.Text == "Kasiyer")
                 {
-                    //Kasiyer kasiyer = new Kasiyer();
-                    //kasiyer.Show();
+                    kasiyer kasiyer = new kasiyer();
+                    kasiyer.Show();
                     this.Hide();
                 }
             }
@@ -50,8 +51,6 @@ namespace Market
                 MessageBox.Show("Kullanıcı adı veya şifre yanlış");
             }
             baglanti.Close();
-
-
 
 
         }
@@ -71,6 +70,11 @@ namespace Market
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

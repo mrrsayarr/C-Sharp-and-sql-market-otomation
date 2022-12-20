@@ -777,6 +777,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 22);
             this.textBox3.TabIndex = 15;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -784,6 +785,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 22);
             this.textBox2.TabIndex = 14;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -990,6 +992,7 @@
             this.textBox14.Size = new System.Drawing.Size(160, 22);
             this.textBox14.TabIndex = 42;
             this.textBox14.Text = "Yönetici";
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // label18
             // 

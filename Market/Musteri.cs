@@ -100,17 +100,13 @@ namespace Market
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             i = e.RowIndex;
-
             if (i >= 0)
             {
                 textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
                 textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                textBox4.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             }
-            //textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            //textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            //textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            
 
         }
 
@@ -161,6 +157,11 @@ namespace Market
                 temizle();
                 kayitlari_getir();
             }
+        }
+
+        private void Musteri_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
