@@ -53,6 +53,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label_Exit = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -113,7 +115,7 @@
             this.Adı.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Adı.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.Adı.Location = new System.Drawing.Point(176, 110);
-            this.Adı.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Adı.Margin = new System.Windows.Forms.Padding(2);
             this.Adı.Name = "Adı";
             this.Adı.Size = new System.Drawing.Size(172, 31);
             this.Adı.TabIndex = 1;
@@ -123,7 +125,7 @@
             this.ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.ID.Location = new System.Drawing.Point(176, 167);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(172, 31);
             this.ID.TabIndex = 1;
@@ -134,7 +136,7 @@
             this.Miktar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Miktar.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.Miktar.Location = new System.Drawing.Point(176, 226);
-            this.Miktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Miktar.Margin = new System.Windows.Forms.Padding(2);
             this.Miktar.Name = "Miktar";
             this.Miktar.Size = new System.Drawing.Size(172, 31);
             this.Miktar.TabIndex = 1;
@@ -145,7 +147,7 @@
             this.Fiyat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Fiyat.Font = new System.Drawing.Font("Segoe UI", 17F);
             this.Fiyat.Location = new System.Drawing.Point(176, 284);
-            this.Fiyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fiyat.Margin = new System.Windows.Forms.Padding(2);
             this.Fiyat.Name = "Fiyat";
             this.Fiyat.Size = new System.Drawing.Size(172, 31);
             this.Fiyat.TabIndex = 1;
@@ -156,22 +158,22 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(368, 68);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(452, 327);
             this.dataGridView1.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 38F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(334, 3);
+            this.label5.Location = new System.Drawing.Point(447, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 62);
+            this.label5.Size = new System.Drawing.Size(293, 35);
             this.label5.TabIndex = 3;
             this.label5.Text = "KASİYER YÖNETİM";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -252,7 +254,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(862, 75);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -264,7 +266,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1024, 75);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(136, 174);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +278,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(862, 272);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(136, 176);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +290,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(1024, 272);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(136, 176);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -301,7 +303,7 @@
             this.label_Exit.AutoSize = true;
             this.label_Exit.Font = new System.Drawing.Font("Segoe UI", 25.22F, System.Drawing.FontStyle.Bold);
             this.label_Exit.ForeColor = System.Drawing.Color.Red;
-            this.label_Exit.Location = new System.Drawing.Point(1112, 11);
+            this.label_Exit.Location = new System.Drawing.Point(1152, -3);
             this.label_Exit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Exit.Name = "label_Exit";
             this.label_Exit.Size = new System.Drawing.Size(42, 46);
@@ -311,12 +313,38 @@
             this.label_Exit.MouseEnter += new System.EventHandler(this.label_Exit_MouseEnter);
             this.label_Exit.MouseLeave += new System.EventHandler(this.label_Exit_MouseLeave);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(405, 422);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(296, 41);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "TOPLAM TUTAR:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(711, 422);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 41);
+            this.label7.TabIndex = 8;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // kasiyer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1192, 499);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -336,10 +364,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kasiyer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kasiyer";
+            this.Load += new System.EventHandler(this.kasiyer_Load_1);
             this.Click += new System.EventHandler(this.kasiyer_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -377,5 +406,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label_Exit;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

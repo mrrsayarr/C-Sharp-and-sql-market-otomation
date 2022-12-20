@@ -46,8 +46,7 @@ namespace Market
             cmd.ExecuteNonQuery();
             con.Close();
             listele();
-            listele();
-            
+            hesapla();
         }
 
         private void SİL_Click(object sender, EventArgs e)
@@ -60,6 +59,7 @@ namespace Market
             cmd.ExecuteNonQuery();
             con.Close();
             listele();
+            hesapla();
         }
 
         private void ID_TextChanged(object sender, EventArgs e)
@@ -93,6 +93,28 @@ namespace Market
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
+        }
+
+        private void hesapla()
+        {
+            //try
+            //{
+            //    con.Open();
+            //    SqlCommand komut = new SqlCommand("Select sum(productPrice) from Fis", con);
+            //    label7.Text = komut.ExecuteScalar() + " TL";
+            //    con.Close();
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
+            int sum = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
+            }
+            label7.Text = sum.ToString();
         }
 
         private void Yazdir_Click_1(object sender, EventArgs e)
@@ -181,5 +203,16 @@ namespace Market
         {
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kasiyer_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
