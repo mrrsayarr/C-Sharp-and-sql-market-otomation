@@ -84,3 +84,18 @@ C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main
 C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.pdb
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Form1.resources
 D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.kasiyer.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe.config
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.exe
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\bin\Debug\Market.pdb
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.AssemblyReference.cache
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.SuggestedBindingRedirects.cache
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Form1.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.kasiyer.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Login.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Admin.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Musteri.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.Properties.Resources.resources
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.GenerateResource.cache
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.exe
+C:\Users\SSD\Documents\GitHub\C-Sharp-and-sql-market-otomation\Market\obj\Debug\Market.pdb
