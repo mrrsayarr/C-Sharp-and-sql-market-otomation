@@ -173,5 +173,12 @@ namespace Market
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            kasiyer kasiyer = new kasiyer();
+            kasiyer.Show();
+            this.Hide();
+        }
     }
 }

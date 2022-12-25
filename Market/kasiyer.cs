@@ -50,6 +50,7 @@ namespace Market
 
         private void SİL_Click(object sender, EventArgs e)
         {
+
             cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
             //yada **
             //cmd = new SqlCommand("delete from Fis where ÜrünID='" + int.Parse(ID.Text) + "'", con);
@@ -218,6 +219,7 @@ namespace Market
             sil.ExecuteNonQuery();
             con.Close();
             listele();
+            hesapla();
         }
 
         private void Miktar_KeyPress(object sender, KeyPressEventArgs e)
@@ -228,6 +230,84 @@ namespace Market
         private void ID_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Musteri musteri = new Musteri();
+            musteri.Show();
+            //this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            // 1 
+            ID.Text += label10.Text;
+            //ID.Focus();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            // 2
+            ID.Text += label11.Text;
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            // 3
+            ID.Text += label12.Text;
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            // 4
+            ID.Text += label13.Text;
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            // 5
+            ID.Text += label14.Text;
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            // 6
+            ID.Text += label15.Text;
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            // 7
+            ID.Text += label18.Text;
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            // 8
+            ID.Text += label17.Text;
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            // 9
+            ID.Text += label16.Text;
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            // 0
+            ID.Text += label19.Text;
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+            ID.Text = "";
         }
     }
 }

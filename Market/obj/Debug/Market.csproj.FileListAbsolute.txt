@@ -82,3 +82,5 @@ C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main
 C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.csproj.CoreCompileInputs.cache
 C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.exe
 C:\Users\SSD\Downloads\Yeni WinRAR arşivi\C-Sharp-and-sql-market-otomation-main\Market\obj\Debug\Market.pdb
+D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.Form1.resources
+D:\SQL\BİRLEŞTİRME\market-master\market-master\Market\obj\Debug\Market.kasiyer.resources
