@@ -69,6 +69,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -228,14 +229,14 @@
             // Yazdir
             // 
             this.Yazdir.AutoSize = true;
-            this.Yazdir.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.Yazdir.Font = new System.Drawing.Font("Tahoma", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Yazdir.ForeColor = System.Drawing.Color.White;
-            this.Yazdir.Location = new System.Drawing.Point(115, 380);
+            this.Yazdir.Location = new System.Drawing.Point(69, 380);
             this.Yazdir.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Yazdir.Name = "Yazdir";
-            this.Yazdir.Size = new System.Drawing.Size(152, 41);
+            this.Yazdir.Size = new System.Drawing.Size(231, 40);
             this.Yazdir.TabIndex = 4;
-            this.Yazdir.Text = "YAZDIR";
+            this.Yazdir.Text = "YAZDIR/SAT";
             this.Yazdir.Click += new System.EventHandler(this.Yazdir_Click);
             this.Yazdir.MouseEnter += new System.EventHandler(this.Yazdir_MouseEnter);
             this.Yazdir.MouseLeave += new System.EventHandler(this.Yazdir_MouseLeave);
@@ -335,7 +336,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(421, 451);
+            this.label6.Location = new System.Drawing.Point(420, 451);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(296, 41);
@@ -348,7 +349,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(711, 451);
+            this.label7.Location = new System.Drawing.Point(710, 451);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 41);
@@ -373,7 +374,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(65, 522);
+            this.label9.Location = new System.Drawing.Point(56, 522);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(263, 40);
@@ -526,12 +527,12 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(833, 82);
+            this.groupBox1.Location = new System.Drawing.Point(833, 98);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 266);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ID Girin";
+            this.groupBox1.Text = "ÜRÜN ID";
             // 
             // label20
             // 
@@ -541,10 +542,22 @@
             this.label20.Location = new System.Drawing.Point(132, 194);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 58);
+            this.label20.Size = new System.Drawing.Size(59, 58);
             this.label20.TabIndex = 21;
-            this.label20.Text = "<";
+            this.label20.Text = "«";
             this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(420, 521);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(298, 41);
+            this.label21.TabIndex = 22;
+            this.label21.Text = "STOK MİKTARI: ";
             // 
             // kasiyer
             // 
@@ -552,6 +565,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1370, 631);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -636,5 +650,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }

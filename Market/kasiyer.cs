@@ -307,7 +307,23 @@ namespace Market
 
         private void label20_Click(object sender, EventArgs e)
         {
+            // clear ID box
             ID.Text = "";
+        }
+        private void stok_takibi()
+        {
+            //String stok = "Select * from productTB where productPCS=@productPCS";
+
+            //SqlCommand komut = new SqlCommand(stok, con);
+
+            //komut.Parameters.AddWithValue("@productPCS", label21.Text);
+
+            //SqlDataAdapter da = new SqlDataAdapter(komut);
+            //DataTable dt = new DataTable();
+
+            //da.Fill(dt);
+            //dataGridView1.DataSource = dt;
+            //con.Close();
         }
     }
 }

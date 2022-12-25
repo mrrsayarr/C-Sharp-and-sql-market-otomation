@@ -27,18 +27,18 @@ namespace Market
         }
 
         static string constring_urun = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
-        SqlConnection baglan_urun = new SqlConnection(constring_urun);
+        SqlConnection baglan_musteri = new SqlConnection(constring_urun);
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (baglan_urun.State == ConnectionState.Closed)
+                if (baglan_musteri.State == ConnectionState.Closed)
                 {
-                    baglan_urun.Open();
+                    baglan_musteri.Open();
                     string kayit = "insert into CustomerTB (customerName, customerTel, customerCardID) values(@customerName, @customerTel, @customerCardID)";
 
-                    SqlCommand komut = new SqlCommand(kayit, baglan_urun);
+                    SqlCommand komut = new SqlCommand(kayit, baglan_musteri);
 
                     komut.Parameters.AddWithValue("@customerName", textBox1.Text);
                     komut.Parameters.AddWithValue("@customerTel", textBox2.Text);
@@ -49,19 +49,19 @@ namespace Market
                     {
                         MessageBox.Show("Şifreniz 4 hane veya daha büyük olmalıdır !");
                         textBox3.Focus();
-                        baglan_urun.Close();
+                        baglan_musteri.Close();
                     }
                     else if (textBox1.TextLength < 3 || textBox2.TextLength < 10)
                     {
                         MessageBox.Show("Geçerli değerler girin !");
 
-                        baglan_urun.Close();
+                        baglan_musteri.Close();
                     }
 
                     else
                     {
                         komut.ExecuteNonQuery();
-                        baglan_urun.Close();
+                        baglan_musteri.Close();
 
                         MessageBox.Show("kayıt ekleme başarılı");
 
@@ -80,14 +80,14 @@ namespace Market
         {
             string getir = "Select * from CustomerTB";
 
-            SqlCommand komut = new SqlCommand(getir, baglan_urun);
+            SqlCommand komut = new SqlCommand(getir, baglan_musteri);
             SqlDataAdapter ad = new SqlDataAdapter(komut);
 
             DataTable dt = new DataTable();
             ad.Fill(dt);
             dataGridView1.DataSource = dt;
 
-            baglan_urun.Close();
+            baglan_musteri.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -106,15 +106,15 @@ namespace Market
                 textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
                 textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
             }
-            
+
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            String kayit = "Select * from custoemrTB where customerName=@customerName";
+            String kayit = "Select * from customerTB where customerName=@customerName";
 
-            SqlCommand komut = new SqlCommand(kayit, baglan_urun);
+            SqlCommand komut = new SqlCommand(kayit, baglan_musteri);
 
             komut.Parameters.AddWithValue("@customerName", textBox4.Text);
 
@@ -123,7 +123,7 @@ namespace Market
 
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            baglan_urun.Close();
+            baglan_musteri.Close();
 
             temizle();
         }
@@ -139,14 +139,14 @@ namespace Market
         {
             string sil = "Delete from customerTB where customerID = @customerID";
 
-            SqlCommand komut = new SqlCommand(sil, baglan_urun);
+            SqlCommand komut = new SqlCommand(sil, baglan_musteri);
 
-            baglan_urun.Open();
+            baglan_musteri.Open();
 
             komut.Parameters.AddWithValue("@customerID", id);
             komut.ExecuteNonQuery();
 
-            baglan_urun.Close();
+            baglan_musteri.Close();
         }
         private void button5_Click(object sender, EventArgs e)
         {
