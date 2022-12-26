@@ -75,6 +75,7 @@ namespace Market
             {
                 Adı.Text = read["productName"].ToString();
                 Fiyat.Text = read["productPrice"].ToString();
+                label22.Text = read["productPCS"].ToString();
             }
             con.Close();
         }
@@ -87,11 +88,33 @@ namespace Market
         }
         private void Yazdir_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
-            printPreviewDialog1.ShowDialog(); // YAZICI GÖRMEZSE HATA VEREBİLİR VEYA PDF YAZICI!
-        }
+            //printPreviewDialog1.Document = printDocument1;
+            //printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            //printPreviewDialog1.ShowDialog(); // YAZICI GÖRMEZSE HATA VEREBİLİR VEYA PDF YAZICI!
 
+            stok_hesap();
+        }
+        private void stok_hesap()
+        {
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from productTB where productPCS like '" + ID.Text + "' ", con);
+            SqlDataReader read = cmd.ExecuteReader();
+
+            //int stok = 0;
+            //for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            //{
+            //    stok = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
+            //}
+            //label22.Text = stok.ToString();
+
+            while (read.Read())
+            {
+                label22.Text = read["productPCS"].ToString();
+            }
+
+            con.Close();
+        }
         private void hesapla()
         {
             //try
