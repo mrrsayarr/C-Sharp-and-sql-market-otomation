@@ -29,6 +29,7 @@ namespace Market
         static string constring_urun = "Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True";
         SqlConnection baglan_musteri = new SqlConnection(constring_urun);
 
+       
         private void button1_Click(object sender, EventArgs e)
         {
             try

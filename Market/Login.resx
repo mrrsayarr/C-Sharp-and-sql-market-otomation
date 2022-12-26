@@ -157,7 +157,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA1IAAANSCAIAAADgRGhQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7s3W3obmt+0He1pk3U2JioNQ+EUIIMwRdS8qL4QKVINCmtdhApRfoi
+        vwAADr8BOAVTJAAA/7JJREFUeF7s3W3obmt+0He1pk3U2JioNQ+EUIIMwRdS8qL4QKVINCmtdhApRfoi
         SAmSFpsUjJU22lYrEor0RRjyYghJQCjWSh+QCoqEIEVCCTKEWB9qddpGzVNN5szMmTP/3bXP9Z1rrnut
         9Vn/+7/3Ga1wf/lxc13X+qx17zNn7/t/x3Zm/6JXl33ishAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAK
         oRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAKoRAK
@@ -2569,7 +2569,7 @@
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEmFSURBVHhe7d15
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEmFSURBVHhe7d15
         nB1lne9x0p3O0tk3sgfIQhbWSCBsgRAiQghbQgICgQSSTiBmAULCpoDbRBFFr1cBUQYRxODCjIAMXEe5
         F8dR5F4RQRwVwRkFVASURQjJc6uO5zDQfhO6n189T1Wd8/m+Xu9/itC/U+dXVb+nu09X7UAIIYSQUqZL
         YvfE6sRtiZ8kXko8l3g08aXEcYnuCUIIIYSUOGMTbYkvJv4z4TrgV4k5CUIIIYSUJOMTyxI3J36XUAO+
@@ -2889,7 +2889,7 @@
   <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAATxBJREFUeF7tnEGSIz2WHmcz/yE0rZ6rzGLuJDNtNGbayHRpCV+1s5oZFSSAl0Fm
+        DQAACw0B7QfALAAATxBJREFUeF7tnEGSIz2WHmcz/yE0rZ6rzGLuJDNtNGbayHRpCV+1s5oZFSSAl0Fm
         BOFu9hYZAf9AMoF4qEyr/Jf//M//+KvVv7b6lwrx8JNzK/MGiYdvXoF4+OYViIdvXoF4+OYViIdvXoF4
         +LW8qcEb4uHXJt8QD9+8AvHwzSsQD9+8AvHwzSsQD9+8AvHwzRtlavAd8ZisPvkd8fDNKxAP37wC8fDN
         KxAP37wC8fDNKxAP37xXk0mY7JDJ4+GbVyAevnkF4uGbVyAevnkF4uGbVyAevnmvJpMw2SGTx8M3r0A8

@@ -249,10 +249,11 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(920, 498);
             this.tabControl1.TabIndex = 9;
+            this.tabControl1.SystemColorsChanged += new System.EventHandler(this.tabControl1_SystemColorsChanged);
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.button17);
             this.tabPage2.Controls.Add(this.progressBar1);
@@ -283,9 +284,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.button16);
             this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(566, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(306, 120);
@@ -295,8 +298,10 @@
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.DimGray;
+            this.button16.BackColor = System.Drawing.Color.White;
             this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Location = new System.Drawing.Point(150, 64);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(135, 43);
@@ -314,18 +319,22 @@
             // 
             // button17
             // 
+            this.button17.BackColor = System.Drawing.Color.White;
             this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Location = new System.Drawing.Point(347, 71);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(135, 41);
             this.button17.TabIndex = 33;
             this.button17.Text = "LİSTELE";
-            this.button17.UseVisualStyleBackColor = true;
+            this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.BackColor = System.Drawing.Color.Silver;
+            this.progressBar1.BackColor = System.Drawing.Color.White;
+            this.progressBar1.ForeColor = System.Drawing.Color.White;
             this.progressBar1.Location = new System.Drawing.Point(512, 24);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(10, 182);
@@ -334,9 +343,10 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 230);
+            this.dataGridView2.Location = new System.Drawing.Point(-3, 228);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(912, 239);
@@ -347,53 +357,67 @@
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.White;
             this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Location = new System.Drawing.Point(716, 155);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(135, 41);
             this.button15.TabIndex = 28;
             this.button15.Text = "FORMU TEMİZLE";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.White;
             this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Location = new System.Drawing.Point(347, 118);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(135, 41);
             this.button14.TabIndex = 27;
             this.button14.Text = "GÜNCELLE";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.White;
             this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Location = new System.Drawing.Point(347, 165);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(135, 41);
             this.button13.TabIndex = 26;
             this.button13.Text = "ÜRÜNÜ SİL";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.White;
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Location = new System.Drawing.Point(347, 24);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(135, 41);
             this.button12.TabIndex = 25;
             this.button12.Text = "EKLE";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(213, 184);
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox11.Location = new System.Drawing.Point(210, 184);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(116, 22);
+            this.textBox11.Size = new System.Drawing.Size(116, 25);
             this.textBox11.TabIndex = 24;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
@@ -401,92 +425,106 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(39, 181);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(168, 25);
+            this.label14.Size = new System.Drawing.Size(160, 23);
             this.label14.TabIndex = 23;
             this.label14.Text = "ÜRÜN TEDARİK";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(22, 151);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(185, 25);
+            this.label13.Size = new System.Drawing.Size(175, 23);
             this.label13.TabIndex = 22;
             this.label13.Text = "ÜRÜN KATEGORİ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(35, 122);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 25);
+            this.label12.Size = new System.Drawing.Size(164, 23);
             this.label12.TabIndex = 21;
             this.label12.Text = "ÜRÜN MARKASI";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(64, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 25);
+            this.label11.Size = new System.Drawing.Size(135, 23);
             this.label11.TabIndex = 20;
             this.label11.Text = "ÜRÜN ADEDİ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(64, 57);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 25);
+            this.label10.Size = new System.Drawing.Size(140, 23);
             this.label10.TabIndex = 19;
             this.label10.Text = "ÜRÜN FİYATI";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(95, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 25);
+            this.label9.Size = new System.Drawing.Size(109, 23);
             this.label9.TabIndex = 18;
             this.label9.Text = "ÜRÜN ADI";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(213, 155);
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox10.Location = new System.Drawing.Point(210, 152);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(116, 22);
+            this.textBox10.Size = new System.Drawing.Size(116, 25);
             this.textBox10.TabIndex = 4;
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(213, 124);
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox9.Location = new System.Drawing.Point(210, 119);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(116, 22);
+            this.textBox9.Size = new System.Drawing.Size(116, 25);
             this.textBox9.TabIndex = 3;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(213, 91);
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox8.Location = new System.Drawing.Point(210, 87);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(116, 22);
+            this.textBox8.Size = new System.Drawing.Size(116, 25);
             this.textBox8.TabIndex = 2;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(213, 57);
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox7.Location = new System.Drawing.Point(210, 54);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(116, 22);
+            this.textBox7.Size = new System.Drawing.Size(116, 25);
             this.textBox7.TabIndex = 1;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
@@ -494,15 +532,17 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(213, 24);
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox6.Location = new System.Drawing.Point(210, 22);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(116, 22);
+            this.textBox6.Size = new System.Drawing.Size(116, 25);
             this.textBox6.TabIndex = 0;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabPage4.Controls.Add(this.pictureBox4);
             this.tabPage4.Controls.Add(this.label24);
             this.tabPage4.Controls.Add(this.label23);
@@ -554,37 +594,43 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(47, 197);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(126, 25);
+            this.label24.Size = new System.Drawing.Size(120, 23);
             this.label24.TabIndex = 41;
             this.label24.Text = "MARKET ID";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(83, 169);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(90, 25);
+            this.label23.Size = new System.Drawing.Size(83, 23);
             this.label23.TabIndex = 40;
             this.label23.Text = "DURUM";
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(179, 198);
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox21.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox21.Location = new System.Drawing.Point(179, 200);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(160, 22);
+            this.textBox21.Size = new System.Drawing.Size(160, 25);
             this.textBox21.TabIndex = 39;
             this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox21_KeyPress);
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(179, 167);
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox20.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox20.Location = new System.Drawing.Point(179, 169);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(160, 22);
+            this.textBox20.Size = new System.Drawing.Size(160, 25);
             this.textBox20.TabIndex = 38;
             // 
             // groupBox2
@@ -638,11 +684,14 @@
             // 
             // textBox13
             // 
+            this.textBox13.BackColor = System.Drawing.Color.White;
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox13.Location = new System.Drawing.Point(178, 111);
+            this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox13.Location = new System.Drawing.Point(178, 110);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(160, 22);
+            this.textBox13.Size = new System.Drawing.Size(160, 25);
             this.textBox13.TabIndex = 32;
             this.textBox13.Text = "Kasiyer";
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
@@ -650,10 +699,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(100, 112);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 25);
+            this.label17.Size = new System.Drawing.Size(69, 23);
             this.label17.TabIndex = 31;
             this.label17.Text = "YETKİ";
             // 
@@ -674,7 +724,8 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-4, 253);
             this.dataGridView1.Name = "dataGridView1";
@@ -687,66 +738,82 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.White;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(517, 70);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(135, 41);
             this.button6.TabIndex = 25;
             this.button6.Text = "VERİYİ SİL";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(517, 16);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(135, 41);
             this.button5.TabIndex = 24;
             this.button5.Text = "GÜNCELLE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(361, 125);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(135, 41);
             this.button4.TabIndex = 23;
             this.button4.Text = "FORMU TEMİZLE";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(361, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 41);
             this.button3.TabIndex = 22;
             this.button3.Text = "LİSTELE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(361, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 41);
             this.button2.TabIndex = 21;
             this.button2.Text = "EKLE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(99, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 25);
+            this.label7.Size = new System.Drawing.Size(68, 23);
             this.label7.TabIndex = 20;
             this.label7.Text = "ŞİFRE";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -754,20 +821,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(14, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 25);
+            this.label6.Size = new System.Drawing.Size(152, 23);
             this.label6.TabIndex = 19;
             this.label6.Text = "EMAİL ADRESİ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(27, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 25);
+            this.label5.Size = new System.Drawing.Size(134, 23);
             this.label5.TabIndex = 18;
             this.label5.Text = "TELEFON NO";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -775,42 +844,51 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 23);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(14, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 25);
+            this.label4.Size = new System.Drawing.Size(160, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "KULLANICI ADI";
             // 
             // textBox4
             // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
             this.textBox4.Location = new System.Drawing.Point(178, 139);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 22);
+            this.textBox4.Size = new System.Drawing.Size(160, 25);
             this.textBox4.TabIndex = 16;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(178, 81);
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox3.Location = new System.Drawing.Point(178, 80);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 22);
+            this.textBox3.Size = new System.Drawing.Size(160, 25);
             this.textBox3.TabIndex = 15;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 51);
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(179, 50);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
+            this.textBox2.Size = new System.Drawing.Size(159, 25);
             this.textBox2.TabIndex = 14;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 23);
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(178, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.Size = new System.Drawing.Size(160, 25);
             this.textBox1.TabIndex = 13;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -867,7 +945,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.dataGridView3);
@@ -949,7 +1027,8 @@
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(-4, 252);
             this.dataGridView3.Name = "dataGridView3";
@@ -961,66 +1040,83 @@
             // 
             // button18
             // 
+            this.button18.BackColor = System.Drawing.Color.White;
             this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Location = new System.Drawing.Point(515, 74);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(135, 41);
             this.button18.TabIndex = 47;
             this.button18.Text = "VERİYİ SİL";
-            this.button18.UseVisualStyleBackColor = true;
+            this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
+            this.button19.BackColor = System.Drawing.Color.White;
             this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Location = new System.Drawing.Point(515, 20);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(135, 41);
             this.button19.TabIndex = 46;
             this.button19.Text = "GÜNCELLE";
-            this.button19.UseVisualStyleBackColor = true;
+            this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.White;
             this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Location = new System.Drawing.Point(361, 129);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(135, 41);
             this.button20.TabIndex = 45;
             this.button20.Text = "FORMU TEMİZLE";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
+            this.button21.BackColor = System.Drawing.Color.White;
             this.button21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button21.FlatAppearance.BorderSize = 0;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Location = new System.Drawing.Point(361, 74);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(135, 41);
             this.button21.TabIndex = 44;
             this.button21.Text = "LİSTELE";
-            this.button21.UseVisualStyleBackColor = true;
+            this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
+            this.button22.BackColor = System.Drawing.Color.White;
             this.button22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Location = new System.Drawing.Point(361, 21);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(135, 41);
             this.button22.TabIndex = 43;
             this.button22.Text = "EKLE";
-            this.button22.UseVisualStyleBackColor = true;
+            this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // textBox14
             // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
             this.textBox14.Location = new System.Drawing.Point(182, 115);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(160, 22);
+            this.textBox14.Size = new System.Drawing.Size(160, 25);
             this.textBox14.TabIndex = 42;
             this.textBox14.Text = "Yönetici";
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
@@ -1028,81 +1124,94 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(104, 115);
+            this.label18.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(104, 117);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 25);
+            this.label18.Size = new System.Drawing.Size(69, 23);
             this.label18.TabIndex = 41;
             this.label18.Text = "YETKİ";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(103, 142);
+            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(103, 144);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 25);
+            this.label19.Size = new System.Drawing.Size(68, 23);
             this.label19.TabIndex = 40;
             this.label19.Text = "ŞİFRE";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(18, 84);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(158, 25);
+            this.label20.Size = new System.Drawing.Size(152, 23);
             this.label20.TabIndex = 39;
             this.label20.Text = "EMAİL ADRESİ";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(31, 54);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(146, 25);
+            this.label21.Size = new System.Drawing.Size(134, 23);
             this.label21.TabIndex = 38;
             this.label21.Text = "TELEFON NO";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(18, 26);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(159, 25);
+            this.label22.Size = new System.Drawing.Size(160, 23);
             this.label22.TabIndex = 37;
             this.label22.Text = "KULLANICI ADI";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(182, 142);
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox15.Location = new System.Drawing.Point(182, 144);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(160, 22);
+            this.textBox15.Size = new System.Drawing.Size(160, 25);
             this.textBox15.TabIndex = 36;
             // 
             // textBox16
             // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
             this.textBox16.Location = new System.Drawing.Point(182, 26);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(160, 22);
+            this.textBox16.Size = new System.Drawing.Size(160, 25);
             this.textBox16.TabIndex = 35;
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(183, 59);
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox17.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox17.Location = new System.Drawing.Point(183, 56);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(160, 22);
+            this.textBox17.Size = new System.Drawing.Size(160, 25);
             this.textBox17.TabIndex = 34;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox17_KeyPress);
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(182, 87);
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox18.Location = new System.Drawing.Point(182, 86);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(160, 22);
+            this.textBox18.Size = new System.Drawing.Size(160, 25);
             this.textBox18.TabIndex = 33;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
@@ -1143,12 +1252,13 @@
             // 
             // button24
             // 
+            this.button24.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button24.Location = new System.Drawing.Point(3, 3);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(888, 31);
             this.button24.TabIndex = 11;
             this.button24.Text = "MÜŞTERİ EKLE / SİL";
-            this.button24.UseVisualStyleBackColor = true;
+            this.button24.UseVisualStyleBackColor = false;
             this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // panel2
@@ -1175,7 +1285,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tabPage5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage5.Controls.Add(this.panel1);
             this.tabPage5.Controls.Add(this.label15);
@@ -1189,7 +1299,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label16);
             this.panel1.Location = new System.Drawing.Point(-4, 356);
             this.panel1.Name = "panel1";
@@ -1200,6 +1310,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label16.Location = new System.Drawing.Point(539, 7);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(361, 31);

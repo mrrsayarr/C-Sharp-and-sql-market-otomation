@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Market
 {
     public partial class kasiyer : Form
@@ -26,42 +19,65 @@ namespace Market
             dataGridView1.DataSource = tablo;
 
         }
+        public void backgraund()
+        {
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            
+            this.dataGridView1.DefaultCellStyle.BackColor = Color.PaleGreen;
+
+        }
         public kasiyer()
         {
             InitializeComponent();
-            
+
         }
         private void kasiyer_Load(object sender, EventArgs e)
         {
             listele();
-            MessageBox.Show("dsa");
         }
 
         private void Ekle_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("insert into Fis(ÜrünID,ÜrünAdı,Fiyat,Miktar) values('" + int.Parse(ID.Text) + "','" + Adı.Text + "','" + int.Parse(Miktar.Text) * int.Parse(Fiyat.Text) + "','" + int.Parse(Miktar.Text) + "')", con);
-            con.Open();
+            
 
-            cmd.ExecuteNonQuery();
-            con.Close();
-            listele();
-            hesapla();
+            if (ID.Text != "")
+            {
+                cmd = new SqlCommand("insert into Fis(ÜrünID,ÜrünAdı,Fiyat,Miktar) values('" + int.Parse(ID.Text) + "','" + Adı.Text + "','" + int.Parse(Miktar.Text) * int.Parse(Fiyat.Text) + "','" + int.Parse(Miktar.Text) + "')", con);
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                listele();
+                hesapla();
+            }
         }
 
         private void SİL_Click(object sender, EventArgs e)
         {
+            if (ID.Text != "" || (ID.Text != "" && dataGridView1.Rows != null))
+            {
 
-            cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
-            //yada **
-            //cmd = new SqlCommand("delete from Fis where ÜrünID='" + int.Parse(ID.Text) + "'", con);
+                cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
+                //yada **
+                //cmd = new SqlCommand("delete from Fis where ÜrünID='" + int.Parse(ID.Text) + "'", con);
 
-            //cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
-            con.Open();
+                //cmd = new SqlCommand("DELETE from Fis where ÜrünID = '" + int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()) + "'  ", con);
+                con.Open();
 
-            cmd.ExecuteNonQuery();
-            con.Close();
-            listele();
-            hesapla();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                listele();
+                hesapla();
+            }
+            else
+            {
+                con.Open();
+                SqlCommand sil = new SqlCommand("TRUNCATE TABLE Fis;", con);
+                sil.ExecuteNonQuery();
+                con.Close();
+            }
+
+
         }
 
         private void ID_TextChanged(object sender, EventArgs e)
@@ -91,27 +107,33 @@ namespace Market
             //printPreviewDialog1.Document = printDocument1;
             //printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             //printPreviewDialog1.ShowDialog(); // YAZICI GÖRMEZSE HATA VEREBİLİR VEYA PDF YAZICI!
-
+            
             stok_hesap();
+
+            con.Open();
+            SqlCommand sil = new SqlCommand("TRUNCATE TABLE Fis;", con);
+            sil.ExecuteNonQuery();
+            con.Close();
+            listele();
+            hesapla();
         }
         private void stok_hesap()
         {
-
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from productTB where productPCS like '" + ID.Text + "' ", con);
-            SqlDataReader read = cmd.ExecuteReader();
+            //SqlCommand cmd = new SqlCommand("select * from productTB where productPCS like '" + ID.Text + "' ", con);
+            //SqlDataReader read = cmd.ExecuteReader();
 
-            //int stok = 0;
-            //for (int i = 0; i < dataGridView1.Rows.Count; ++i)
-            //{
-            //    stok = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
-            //}
-            //label22.Text = stok.ToString();
-
-            while (read.Read())
-            {
-                label22.Text = read["productPCS"].ToString();
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {   
+                //MessageBox.Show("das");
+                //SqlCommand komut2 = new SqlCommand("update productTB set productPCS=productPCS-'" + int.Parse(dataGridView1.Rows[i].Cells["Miktar"].Value.ToString()) + "' where productID='" + dataGridView1.Rows[i].Cells["ÜrünID"].Value.ToString() + "'", con);
+                SqlCommand komut2 = new SqlCommand("update productTB set productPCS=productPCS-'" + int.Parse(dataGridView1.Rows[i].Cells["Miktar"].Value.ToString()) + "' where productID='" + dataGridView1.Rows[i].Cells["ÜrünID"].Value.ToString() + "'", con);
+                komut2.ExecuteNonQuery();
+                
             }
+            
+            //SqlCommand komut3 = new SqlCommand("delete from sepet", con);
+            //komut3.ExecuteNonQuery();
 
             con.Close();
         }
@@ -138,7 +160,7 @@ namespace Market
 
         private void Yazdir_Click_1(object sender, EventArgs e)
         {
-           
+
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -259,7 +281,7 @@ namespace Market
         {
             Musteri musteri = new Musteri();
             musteri.Show();
-            //this.Hide();
+            this.Hide();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -347,6 +369,11 @@ namespace Market
             //da.Fill(dt);
             //dataGridView1.DataSource = dt;
             //con.Close();
+        }
+
+        private void label8_MouseEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }

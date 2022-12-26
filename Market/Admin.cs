@@ -20,9 +20,23 @@ namespace Market
             InitializeComponent();
         }
 
+
         private void Admin_Load(object sender, EventArgs e)
         {
-       
+            //listele();
+            urunleri_getir();
+            kayitlari_getir();
+
+            //musteri
+            panel2.Controls.Clear(); // Alt panel ismi "panel2"
+            Musteri if1 = new Musteri();
+            if1.TopLevel = false;
+            panel2.Controls.Add(if1);
+            if1.Show();
+            if1.Dock = DockStyle.Fill;
+            if1.BringToFront();
+            
+
         }
 
         private void kullanıcıekle_Click(object sender, EventArgs e)
@@ -896,6 +910,13 @@ namespace Market
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void tabControl1_SystemColorsChanged(object sender, EventArgs e)
+        {
+
+        }
+      
+
     }
 }
 

@@ -29,7 +29,7 @@ namespace Market
         {
             SqlConnection baglanti = new SqlConnection("Data Source=SSD-CAT;Initial Catalog=marketDB.bacpac;Integrated Security=True");
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * From adminTB Where adminName='" + txtUser.Text + "' and adminPass='" + txtPass.Text + "' and usertype='" + comboBox1.Text + "'", baglanti);
+            SqlCommand komut = new SqlCommand("Select * From userTB Where userName='" + txtUser.Text + "' and userPass='" + txtPass.Text + "' and usertype='" + comboBox1.Text + "'", baglanti);
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
@@ -42,7 +42,8 @@ namespace Market
                 else if (comboBox1.Text == "Kasiyer")
                 {
                     kasiyer kasiyer = new kasiyer();
-                    kasiyer.listele(); 
+                    kasiyer.listele();
+                    kasiyer.backgraund();
                     kasiyer.Show();
                     this.Hide();
                 }
